@@ -1,4 +1,10 @@
 step_name:
+  type: build
+  title: py_image
+  working_directory: ${{clone_step_name}}
+  dockerfile: Dockerfile
+  image_name: ziv/test
+step_name:
   type: composition
   title: Step Title
   description: Free text description
@@ -7,8 +13,9 @@ step_name:
     version: '2'
     services:
       web:
-        build: .
+        image: ziv/test
         ports:
          - "5000:5000"
       redis:
         image: "redis:alpine"
+   composition_candidates:  service
