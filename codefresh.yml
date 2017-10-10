@@ -16,4 +16,4 @@ step_name:
         image: ${{build_step}}
       redis:
         image: "redis:alpine"
-   composition_candidates: ziv/test
+
