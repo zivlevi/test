@@ -13,9 +13,7 @@ step_name:
     version: '2'
     services:
       web:
-        image:${{build_step}}
+        image: ${{build_step}}
       redis:
         image: "redis:alpine"
-   composition_candidates: 
-    test:
-       image: ${{build_step}}
+   composition_candidates: web
