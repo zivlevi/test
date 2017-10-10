@@ -13,9 +13,11 @@ step_name:
     version: '2'
     services:
       web:
-        image: ziv/test
+        image:${{build_step}}
         ports:
          - "5000:5000"
       redis:
         image: "redis:alpine"
-   composition_candidates:  service
+   composition_candidates: 
+    test:
+       image: ${{build_step}}
