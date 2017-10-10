@@ -1,10 +1,12 @@
+version: '2.0'
+steps:
 step_name:
   type: build
   title: py_image
   working_directory: ${{clone_step_name}}
   dockerfile: Dockerfile
   image_name: ziv/test
-step_name:
+another-step:
   type: composition
   title: Step Title
   description: Free text description
