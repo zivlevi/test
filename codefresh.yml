@@ -14,8 +14,6 @@ step_name:
     services:
       web:
         image:${{build_step}}
-        ports:
-         - "5000:5000"
       redis:
         image: "redis:alpine"
    composition_candidates: 
