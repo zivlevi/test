@@ -1,8 +1,14 @@
-version: '2'
-services:
-  web:
-    build: .
-    ports:
-     - "5000:5000"
-  redis:
-    image: "redis:alpine"
+step_name:
+  type: composition
+  title: Step Title
+  description: Free text description
+  working_directory: ${{a_clone_step}}
+  composition:
+    version: '2'
+    services:
+      web:
+        build: .
+        ports:
+         - "5000:5000"
+      redis:
+        image: "redis:alpine"
